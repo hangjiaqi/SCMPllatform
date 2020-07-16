@@ -2,6 +2,7 @@
 buildscript {
     ext.cubaVersion = '6.10.0'
     repositories {
+        mavenLocal()
         maven {
             url 'https://dl.bintray.com/cuba-platform/main'
             
@@ -109,7 +110,7 @@ configure(coreModule) {
         host = 'localhost'
         dbName = 'scmpllatform'
         dbUser = 'root'
-        dbPassword = '123456'
+        dbPassword = '123456@'
         connectionParams = '?useSSL=false&allowMultiQueries=true&serverTimezone=UTC'
     }
 
@@ -118,7 +119,7 @@ configure(coreModule) {
         host = 'localhost'
         dbName = 'scmpllatform'
         dbUser = 'root'
-        dbPassword = '123456'
+        dbPassword = '123456@'
         connectionParams = '?useSSL=false&allowMultiQueries=true&serverTimezone=UTC'
     }
 }
