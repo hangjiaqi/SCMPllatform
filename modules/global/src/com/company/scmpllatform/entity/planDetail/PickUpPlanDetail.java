@@ -17,6 +17,32 @@ public class PickUpPlanDetail extends StandardEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PICK_UP_PLAN_ID")
     protected PickUpPlan pickUpPlan;
+    /**
+     * 运输数量
+     */
+    @Column(name = "TRANSPORT_QUANTITY")
+    protected Integer transportQuantity;
+    /**
+     * 实际运输数量
+     */
+    @Column(name = "ACTUAL_TRANSPORT_QUANTITY")
+    protected Integer actualTransportQuantity;
+
+    public Integer getActualTransportQuantity() {
+        return actualTransportQuantity;
+    }
+
+    public void setActualTransportQuantity(Integer actualTransportQuantity) {
+        this.actualTransportQuantity = actualTransportQuantity;
+    }
+
+    public Integer getTransportQuantity() {
+        return transportQuantity;
+    }
+
+    public void setTransportQuantity(Integer transportQuantity) {
+        this.transportQuantity = transportQuantity;
+    }
 
     public PickUpPlan getPickUpPlan() {
         return pickUpPlan;
