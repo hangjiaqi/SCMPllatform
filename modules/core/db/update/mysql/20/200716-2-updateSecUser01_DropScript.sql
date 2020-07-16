@@ -1,0 +1,12 @@
+alter table SEC_USER drop column SYS_TENANT_ID_NN__U39712 cascade ;
+alter table SEC_USER drop column PASSWORD_ENCRYPTION__U64716 cascade ;
+alter table SEC_USER drop column SYS_TENANT_ID__U40892 cascade ;
+alter table SEC_USER drop column SYS_TENANT_ID_NN__U43904 cascade ;
+alter table SEC_USER drop column PASSWORD_ENCRYPTION__U70820 cascade ;
+alter table SEC_USER drop column GROUP_NAMES__U60649 cascade ;
+alter table SEC_USER drop column PASSWORD_ENCRYPTION__U42482 cascade ;
+alter table SEC_USER drop column PASSWORD_ENCRYPTION__U21081 cascade ;
+alter table SEC_USER drop column SYS_TENANT_ID__U82665 cascade ;
+alter table SEC_USER drop column SYS_TENANT_ID_NN__U91548 cascade ;
+alter table SEC_USER drop column PASSWORD_ENCRYPTION__U71339 cascade ;
+alter table SEC_USER drop column GROUP_NAMES__U79754 cascade ;

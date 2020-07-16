@@ -1,0 +1,2 @@
+alter table SEC_USER_SUBSTITUTION change column SYS_TENANT_ID SYS_TENANT_ID__U38031 varchar(255)^
+alter table SEC_USER_SUBSTITUTION change column SYS_TENANT_ID SYS_TENANT_ID__U99447 varchar(255)^

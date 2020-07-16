@@ -1,4 +1,3 @@
--- begin SCMPLLATFORM_SALES_ORDER
 create table SCMPLLATFORM_SALES_ORDER (
     ID varchar(32),
     VERSION integer not null,
@@ -28,5 +27,4 @@ create table SCMPLLATFORM_SALES_ORDER (
     AVAILABLE 可用数,
     --
     primary key (ID)
-)^
--- end SCMPLLATFORM_SALES_ORDER
+);
