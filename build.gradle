@@ -1,17 +1,16 @@
-
 buildscript {
     ext.cubaVersion = '6.10.0'
     repositories {
         maven {
             url 'https://dl.bintray.com/cuba-platform/main'
-            
+
         }
         mavenCentral()
         jcenter()
         maven {
             url 'http://maven.vaadin.com/vaadin-addons'
         }
-        
+
     }
     dependencies {
         classpath "com.haulmont.gradle:cuba-plugin:$cubaVersion"
@@ -23,7 +22,7 @@ def modulePrefix = 'app'
 def globalModule = project(":${modulePrefix}-global")
 def coreModule = project(":${modulePrefix}-core")
 def webModule = project(":${modulePrefix}-web")
-
+def easyExcel = 'com.alibaba:easyexcel:2.1.6'
 def servletApi = 'javax.servlet:javax.servlet-api:3.1.0'
 
 apply(plugin: 'idea')
@@ -52,9 +51,10 @@ configure([globalModule, coreModule, webModule]) {
     apply(plugin: 'idea')
     apply(plugin: 'cuba')
 
-    dependencies { 
-            testCompile('junit:junit:4.12') 
-        }
+    dependencies {
+        testCompile('junit:junit:4.12')
+        compile(easyExcel)
+    }
 
     task sourceJar(type: Jar) {
         from file('src')
@@ -63,11 +63,12 @@ configure([globalModule, coreModule, webModule]) {
 
     artifacts {
         archives sourceJar
-    } 
+    }
 }
 
 
-configure(globalModule) {entitiesEnhancing {
+configure(globalModule) {
+    entitiesEnhancing {
         main {
             enabled = true
         }
@@ -107,18 +108,18 @@ configure(coreModule) {
     task createDb(dependsOn: assembleDbScripts, description: 'Creates local database', type: CubaDbCreation) {
         dbms = 'mysql'
         host = 'localhost'
-        dbName = 'scmpllatform'
+        dbName = 'scmplatform'
         dbUser = 'root'
-        dbPassword = '123456'
+        dbPassword = '123456@'
         connectionParams = '?useSSL=false&allowMultiQueries=true&serverTimezone=UTC'
     }
 
     task updateDb(dependsOn: assembleDbScripts, description: 'Updates local database', type: CubaDbUpdate) {
         dbms = 'mysql'
         host = 'localhost'
-        dbName = 'scmpllatform'
+        dbName = 'scmplatform'
         dbUser = 'root'
-        dbPassword = '123456'
+        dbPassword = '123456@'
         connectionParams = '?useSSL=false&allowMultiQueries=true&serverTimezone=UTC'
     }
 }
