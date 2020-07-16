@@ -1,14 +1,16 @@
 <Context>
     <!-- Database connection -->
-    <Resource driverClassName="com.mysql.jdbc.Driver"
-              maxIdle="2"
-              maxTotal="20"
-              maxWaitMillis="5000"
-              name="jdbc/CubaDS"
-              password="123456@"
-              type="javax.sql.DataSource"
-              url="jdbc:mysql://localhost/scmpllatform?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=UTC"
-              username="root"/>
+    <Resource
+      name="jdbc/CubaDS"
+      type="javax.sql.DataSource"
+      maxTotal="20"
+      maxIdle="2"
+      maxWaitMillis="5000"
+      driverClassName="com.mysql.jdbc.Driver"
+      url="jdbc:mysql://localhost/scmplatform?useSSL=false&amp;allowMultiQueries=true&amp;serverTimezone=UTC"
+      username="root"
+      password="123456@"/>
+    
     <!-- Switch off session serialization -->
     <Manager pathname=""/>
 </Context>
