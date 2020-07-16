@@ -1,2 +1,1 @@
-# SCMPllatform
-# SCMPllatform
+# scmplatform
