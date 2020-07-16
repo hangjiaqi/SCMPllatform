@@ -1,6 +1,6 @@
-package com.company.scmpllatform.core;
+package com.company.scmplatform.core;
 
-import com.company.scmpllatform.ScmpllatformTestContainer;
+import com.company.scmplatform.ScmpllatformTestContainer;
 import com.haulmont.cuba.core.EntityManager;
 import com.haulmont.cuba.core.Persistence;
 import com.haulmont.cuba.core.Transaction;

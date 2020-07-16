@@ -1,4 +1,4 @@
-package com.company.scmpllatform;
+package com.company.scmplatform;
 
 import com.haulmont.bali.util.Dom4j;
 import com.haulmont.cuba.testsupport.TestContainer;

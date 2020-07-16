@@ -1,6 +1,6 @@
 
 buildscript {
-    ext.cubaVersion = '6.10.0'
+    ext.cubaVersion = '6.10.8'
     repositories {
         mavenLocal()
         maven {
@@ -42,7 +42,8 @@ cuba {
 }
 
 dependencies {
-    appComponent("com.haulmont.cuba:cuba-global:$cubaVersion")
+    appComponent('cn.cuba.trans:transcn-global:6.10.2')
+    appComponent('cn.cuba.trans:transcn-global:6.10.2')
 }
 
 def mysql = 'mysql:mysql-connector-java:5.1.46'
